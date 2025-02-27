@@ -58,6 +58,12 @@ main {
     position: relative;
 }
 
+.padding-card {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px dotted lightgray;
+}
+
 .example-spacer {
     flex: 1 1 auto;
   }
