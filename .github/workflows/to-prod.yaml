@@ -34,7 +34,7 @@ jobs:
 
       - name: Deploy Audita
         if: success()
-        run: aws s3 sync ./dist/faturamento.audita.app.br/browser s3://${{ secrets.AWS_S3_BUCKET }}
+        run: aws s3 sync ./dist/browser s3://${{ secrets.AWS_S3_BUCKET }}
 
       - name: AWS CloudFront Invalidate
         uses: badsyntax/github-action-aws-cloudfront@v1.0.1
