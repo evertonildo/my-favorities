@@ -26,13 +26,27 @@
       <mat-icon>twitter</mat-icon>
     </button>
   </mat-toolbar>
-  <div class="content">
+  <div class="content" style="display: grid;">
 
+    <mat-accordion class="example-headers-align" multi>
+      <mat-expansion-panel *ngFor="let link of links">
+        <mat-expansion-panel-header>
+          <mat-panel-title> {{link.group}} </mat-panel-title>
+          <mat-panel-description>
+            <mat-icon>account_circle</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <a class="a-link" *ngFor="let item of link.links" class="card " target="_blank" rel="noopener" [href]="item.url"
+          [title]="item.title" [style]="styling(item)">
+          <img [src]="item?.image" [alt]="item.title" style="max-width: 100px;padding: 15px;" />
 
-    <mat-tab-group style="width: 100%;" animationDuration="0ms">
+        </a>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-tab-group style="width: 100%; display: none;" animationDuration="0ms">
       <mat-tab *ngFor="let link of links" label="{{link.group}}">
-        <a class="a-link" *ngFor="let item of link.links" class="card " target="_blank" rel="noopener"
-          [href]="item.url" [title]="item.title" [style]="styling(item)">
+        <a class="a-link" *ngFor="let item of link.links" class="card " target="_blank" rel="noopener" [href]="item.url"
+          [title]="item.title" [style]="styling(item)">
           <img [src]="item?.image" [alt]="item.title" style="max-width: 100px;padding: 15px;" />
 
         </a>
