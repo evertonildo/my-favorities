@@ -7,7 +7,8 @@
         {
             "title":"Music Flex",
             "url": "https://app.musiflex.com.br",
-            "image":"https://app.musiflex.com.br/assets/logo-musiflex-D7P2Cybn.png"
+            "image":"https://app.musiflex.com.br/assets/logo-musiflex-D7P2Cybn.png",
+             "backcolor": "black"
         },
         {
             "title":"Microsoft Teams",
